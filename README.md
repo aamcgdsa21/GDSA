@@ -7,6 +7,7 @@ INSTRUCCIONS D'ÚS:
 5. Executar MATLAB.
 6. Executar "main_classificador.m" per fer la classificació.
 7. Executar "Avaluador.m" per a evaluar la classificació i veure les resultats .
+
 ----------------------
                                     
 INSTRUCCIONES DE USO:
@@ -18,6 +19,7 @@ INSTRUCCIONES DE USO:
 5. Ejecutar MATLAB .
 6. Ejecutar " main_classificador.m " para hacer la clasificación.
 7. Ejecutar " Avaluador.m " para evaluar la clasificación y ver las resultados.
+
 ----------------------
 
 HOW TO USE:
