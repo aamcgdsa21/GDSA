@@ -70,9 +70,9 @@ What this code does is classify images for events. The classifiació can be:
 DESCRIPTOR :
 Extracting image features through SURF descriptor .
 
-SORT :
-With the file of training data one kd tree is constructed - tree and the method of
-k - nearest neighbors will look at what class applies .
+CLASSIFICATION:
+With the file of training data one kd-tree and the method oF k -nearest neighbors will 
+look at what class applies.
 
 EVALUATOR :
 With the results obtained in the previous sections we obtain the results of:
