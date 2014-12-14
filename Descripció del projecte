@@ -1,0 +1,80 @@
+DESCRIPCIÓ DEL PROJECTE
+
+INTRODUCCIÓ:
+El que fa aquest codi es classificar una série d'imatges per events. La classifiació pot ser la següent:
+- concert
+- conference
+- exhibition
+- fashion
+- non_event
+- other
+- protest
+- sports
+- theater_dance
+
+DESCRIPTOR:
+Extracció de les característiques de la imatge a través del descriptor SURF.
+
+CLASSIFICADOR:
+Amb el fitxer de les dades d'entrenament es construeix un árbre kd-tree i amb el mètode dels
+k-veïns més propers es mirarà a quina classe correspon.
+
+AVALUADOR:
+Amb els resultats obtinguts en els apartats anteriors obtindrem els resultats de:
+-Precison Recall
+-Fscore
+                                    __________________________________________
+                                    
+DESCRIPCIÓN DEL PROYECTO
+
+INTRODUCCIÓN :
+Lo que hace este código se clasificar una serie de imágenes para eventos. La classifiaciópot ser la siguiente :
+- concert
+- conference
+- exhibition
+- fashion
+- non_event
+- other
+- protest
+- sports
+- theater_dance
+
+DESCRIPTOR :
+Extracción de las características de la imagen a través del descriptor SURF .
+
+CLASIFICADOR :
+Con el archivo de los datos de entrenamiento se construye un árbol kd - tree y con el método de los
+k-vecinos más cercanos se mirará a qué clase corresponde .
+
+EVALUADOR :
+Con los resultados obtenidos en los apartados anteriores obtendremos los resultados de:
+- Precision recall
+- Fscore
+
+                                    __________________________________________
+                                    
+DESCRIPCIÓN DEL PROYECTO
+
+INTRODUCTION :
+What this code does is classify images for events. The classifiació can be:
+- concert
+- conference
+- exhibition
+- fashion
+- non_event
+- other
+- protest
+- sports
+- theater_dance
+
+DESCRIPTOR :
+Extracting image features through SURF descriptor .
+
+SORT :
+With the file of training data one kd tree is constructed - tree and the method of
+k - nearest neighbors will look at what class applies .
+
+EVALUATOR :
+With the results obtained in the previous sections we obtain the results of:
+- Precision recall
+- Fscore
