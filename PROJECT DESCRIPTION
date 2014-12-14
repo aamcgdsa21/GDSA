@@ -21,7 +21,8 @@ k-veïns més propers es mirarà a quina classe correspon.
 
 AVALUADOR:
 Amb els resultats obtinguts en els apartats anteriors obtindrem els resultats de:
--Precison Recall
+-Precison
+-Recall
 -Fscore
 ----------------------
                                     
@@ -48,8 +49,9 @@ k-vecinos más cercanos se mirará a qué clase corresponde .
 
 EVALUADOR :
 Con los resultados obtenidos en los apartados anteriores obtendremos los resultados de:
-- Precision recall
-- Fscore
+-Precison
+-Recall
+-Fscore
 
 ----------------------
                                     
@@ -76,5 +78,6 @@ look at what class applies.
 
 EVALUATOR :
 With the results obtained in the previous sections we obtain the results of:
-- Precision recall
-- Fscore
+-Precison
+-Recall
+-Fscore
