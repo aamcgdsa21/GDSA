@@ -1,7 +1,7 @@
 INSTRUCCIONS D'ÚS:
 
 1. Executar Python.
-2. Executar la tool "2_datasets.py" per obtenir els archius de test i d'entrenament en un fixer de text.
+2. Executar la tool "2_datasets.py" per obtenir els arxius de test i d'entrenament en un fixer de text.
 3. Executar la tool "3_vocabulary.py" per obtenir el vocabulari de les imatges.
 4. Executar la tool "4_boof.py" per obtenir el vector de característiques de cada imatge.
 5. Executar MATLAB.
