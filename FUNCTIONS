@@ -1,0 +1,36 @@
+FUNCIONS
+
+Examengdsa.m  
+  - Forma un map<key,value> (id_foto, vector) amb les bofs (test.mat) de les imatges de test que es vulguin classificar
+    (Podem utilitzar aquesta funció per formar un map amb el màxim d’imatges possibles, així ens estalviem obrir python 
+    cada cop per extreure bofs de noves imatges a classificar).
+
+Examengdsa2.m  
+  - Llegeix el directori de la carpeta on es troben les imatges a classificar.
+    Extreu la seva id i amb el map anterior li associa el seu vector associat.
+    
+------------------
+
+FUNCIONES
+
+Examengdsa.m
+  - Forma un map < key, value > ( id_foto , vector ) con las bofs ( test.mat ) de las imágenes de test que se quieran clasificar
+    ( Podemos utilizar esta función para formar un map con el máximo de imágenes posibles , así nos ahorramos abrir python
+    cada vez para extraer bofs de nuevas imágenes a clasificar ) .
+
+Examengdsa2.m
+  - Lee el directorio de la carpeta donde se encuentran las imágenes a clasificar.
+    Extrae su id y con el map anterior le asocia su vector asociado .
+    
+-------------------
+
+FUNCTIONS
+
+Examengdsa.m
+  - Forms a map <key , value> ( id_foto , vector) with BOFS ( test.mat ) test images that want to classify
+    (We can use this feature to form a map with maximum possible images , so we saved open python
+    increasingly to extract BOFS new images to sort) .
+
+Examengdsa2.m
+  - Read the folder directory where the images to classify.
+    It draws its id and the previous map will associate its associated vector.
