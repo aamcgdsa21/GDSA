@@ -9,7 +9,7 @@ Examengdsa2.m
   - Llegeix el directori de la carpeta on es troben les imatges a classificar.
     Extreu la seva id i amb el map anterior li associa el seu vector associat.
     
-------------------
+----------------------
 
 FUNCIONES
 
@@ -22,7 +22,7 @@ Examengdsa2.m
   - Lee el directorio de la carpeta donde se encuentran las imágenes a clasificar.
     Extrae su id y con el map anterior le asocia su vector asociado .
     
--------------------
+----------------------
 
 FUNCTIONS
 
