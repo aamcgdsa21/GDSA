@@ -1,14 +1,14 @@
 %SCRIPT ENTRENAMENT
 
-function [tree_output, bbdd_train] = entrenament()
-clear all;
+function [tree_output, bbdd_train,m] = entrenament()
 %% -----------------CARREGAR DADES .MAT ENTRENAMENT------------------------
 %Primer carreguem el fitxer .mat amb les dades d'entrenament
 %format per id_foto,vector_caract i el guardem a la carpeta
 %/Imagenes_asignar_clase com a entrenar.txt
+
 tic;
 display('Carregant fitxer de train .mat ...');
-load('bofs_1000_train.mat');  %es pot canviar
+load('bofs_256_10_examen_train.mat');  
 names=fieldnames(bofs(1));
 nom = strcat('./Imagenes_asignar_clase', '/','entrenar.txt');
 fid=fopen(nom,'wt');
@@ -27,10 +27,11 @@ fprintf(fid,'\n');
 end
 fclose(fid);
 
-%% ------------ASSIGNEM LA CLASSE A LA QUE PERTANY--------------------------
+%% ------------ASSIGNAR LA CLASSE A LA QUE PERTANY--------------------------
 %Un cop carregat el fitxer d'entrenament, hem d'assignar la classe a la que
 %pertany. Per a això, primer carreguem el fitxer de veritat terreny i
 %després el fitxer que hem creat anteriorment (entrenar.txt)
+
 display('Assignant classes al fitxer d"entrenament...');
 %Càrrega del fitxer veritat_terreny
 classifPath=uigetdir(pwd, 'Escull la carpeta "veritat_terreny"');
@@ -89,14 +90,15 @@ for i=1:length(train{1,1}) %recorremos id de fotos
         
     fprintf(fid2,'%s',eventType{1});
     fprintf(fid2,'\n');
- end
+end
+ 
  fclose(fid2);
  
- %% -----------CONSTRUIM EL KD-TREE----------------------------------------
- display('Construint el kd-tree...');
- classifPath=uigetdir(pwd, 'Escull la carpeta "Imagenes_entrenar"');
- caracteristicas=dir(classifPath); 
- pathT = strcat(classifPath,'\',caracteristicas(3).name);
+ %% -----------CONSTRUCCIÓ DEL KD-TREE-------------------------------------
+display('Construint el kd-tree...');
+classifPath=uigetdir(pwd, 'Escull la carpeta "Imagenes_entrenar"');
+caracteristicas=dir(classifPath); 
+pathT = strcat(classifPath,'\',caracteristicas(3).name);
     
 formats ='%s%s%s';
 headerLines=0;
@@ -115,8 +117,8 @@ for i=1:length(vectores)
             m(i,j)=element;
         end    
 end
-    
-tree_output = kd_buildtree(m,2);
+ 
+tree_output = createns(m,'nsmethod','kdtree');
 
  display('Heu finalitzat amb èxit la construcció del kd-tree');
 toc;
