@@ -3,7 +3,7 @@ function [miMap]=examengdsa()
 %Cargamos el .mat con id y vector
 tic;
 display('Cargando fichero .mat');
-load('bofs_256_10_TODAS_test.mat'); %Formar map con todos los descriptores de todas las fotos de desenvolupament
+load('bofs_256_10_examen_test.mat'); %Formar map con todos los descriptores de todas las fotos de desenvolupament
 
 %Creamos el map
 miMap = containers.Map();
