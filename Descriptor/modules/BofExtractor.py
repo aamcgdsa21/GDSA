@@ -99,6 +99,7 @@ class BofExtractor:
             #bofs_copy = self.bofs.copy()
             io.savemat( pathFileBof, {'bofs':bofs} ) 
             
+            
     def processImage( self, pathFileImage ):
         """ Detect the keypoints and etxract the SURF descriptor from an image
         stored in disk """
@@ -142,7 +143,7 @@ def main(argv):
 #    pathWork = os.path.join( pathHome, 'work/mediaeval/2013-sed/classification' )
     pathWork = os.path.join( pathHome, 'Desktop/ProyectoGDSA')
 
-    pathDirImages = os.path.join( pathWork, '1_images/train' )
+    pathDirImages = os.path.join( pathWork, '1_images/test' )
     rootName= '322420827344467756_45285892'
     pathFileImage = os.path.join(pathDirImages, rootName + '.jpg')
     pathFileVocabulary = os.path.join(pathWork, '3_vocabulary/vocabulary.p')
