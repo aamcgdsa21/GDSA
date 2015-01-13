@@ -3,7 +3,7 @@ import cv2
 import pickle
 
 class SurfExtractor:
-    """ Extracts the SURF features from an image or collection of images and, if desired,
+    """ Extracts the SURFfeatures from an image or collection of images and, if desired,
     it saves them to disk """
     
     def __init__(self, flagSaveInMemory=False, flagVerbose=False):
@@ -93,12 +93,12 @@ class SurfExtractor:
         
         if descriptors==None:
             descriptors=[]
-            for i in range(128):
+            for i in range(64):
                 descriptors.append(0)
                 
                 
                     
-       #print descriptors
+#        print descriptors
         return keypoints, descriptors
         
     def saveToDisk(self, descriptors, pathDirSurfs, imageId):
@@ -117,3 +117,30 @@ class SurfExtractor:
     
 # Main
 if __name__ == "__main__":
+    
+    pathHome = os.path.expanduser('~')
+    pathWork = os.path.join( pathHome, 'Desktop/ProyectoGDSA')
+    
+#    pathWork = os.path.join( pathHome, 'work/mediaeval/2013-sed/classification' )
+    
+#    pathDirImages = os.path.join( pathWork, '1_images/train' )
+    pathDirImages = os.path.join( pathWork, '1_images' )
+
+    pathFileImage = os.path.join(pathDirImages, '320426234853745400_249212839.jpg')
+
+#    pathFileImage = os.path.join(pathDirImages, '321223103189010824_189558761.jpg')
+
+    pathFileDatasetTrain = os.path.join(pathWork, '2_datasets/train.txt')
+    pathDirSurfs = os.path.join(pathWork, '3_features/debug')
+    if not os.path.exists(pathDirSurfs):
+        os.makedirs(pathDirSurfs)
+    
+    # Init the SURFextractor
+    SurfExtractor = SurfExtractor()
+    
+    SurfExtractor.processTxtFile( pathFileDatasetTrain, pathDirImages,'jpg', pathDirSurfs)
+    
+    #surfExtractor.processImage('320426234853745400_249212839', pathFileImage, pathDirSurfs )
+    
+    
+    
