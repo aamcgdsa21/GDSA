@@ -139,15 +139,11 @@ class VisualVocabulary:
         # Build Histogram
         histogram = np.histogram(quant, bins=self.mbk.n_clusters)
 #        histogram = np.histogram(quant, bins=self.mbk.k)
-
         
         return histogram
         
-
-
 def usage():
     print "This script will generate a visual vocabulary."
-
 
 def main(argv):
     
@@ -155,14 +151,14 @@ def main(argv):
     pathHome = os.path.expanduser('~')
 
     pathWork = os.path.join( pathHome,'Desktop','ProyectoGDSA')
-    pathDirImages = os.path.join( pathWork, '1_images' )
+    pathDirImages = os.path.join( pathWork, '1_images','train' )
     fileImageExtension = 'jpg'
-    pathFileDatasetTrain = os.path.join(pathWork, '2_datasets', 'test.txt')
+    pathFileDatasetTrain = os.path.join(pathWork, '2_datasets', 'train.txt')
     pathVocabulary = os.path.join(pathWork, '3_vocabulary', 'vocabulary.p')
 
     _flagVerbose=False
     
-    vocabularySize=1000                  # Amount of visual words
+    vocabularySize=256                  # Amount of visual words
     maxNumImages=10                     # Maximum amount of images to consider
 
       
@@ -217,3 +213,6 @@ def main(argv):
 
 if __name__ == "__main__":
     main(sys.argv[1:])
+    
+    
+
