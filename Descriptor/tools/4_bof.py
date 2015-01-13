@@ -12,7 +12,7 @@ def processLabel(pathDirImagesBase, pathDirDatasets, bofExtractor, pathDirBofs, 
         return
      
     # File containing the image IDs   
-    pathFileDataset = os.path.join( pathDirDatasets, 'train.txt' )
+    pathFileDataset = os.path.join( pathDirDatasets, datasetLabel+'.txt' )
 
     if not os.path.exists(pathFileDataset):
         print 'ERROR: File not found ' + pathFileDataset
@@ -36,7 +36,7 @@ def main():
         pathWork = os.path.join( pathHome, 'Desktop/ProyectoGDSA')
         pathDirImagesBase = os.path.join(pathWork, '1_images')
         pathDirDatasets = os.path.join(pathWork, '2_datasets')
-        pathFileVocabulary = os.path.join( pathWork, '3_vocabulary','vocabulary.p' )
+        pathFileVocabulary = os.path.join( pathWork, '3_vocabulary','vocabulary_256_10_examen.p' )
         pathDirBofs = os.path.join(pathWork, '4_bof')
                                        
         # Init the BoF extractor
@@ -47,14 +47,23 @@ def main():
         print 'Training with visual features...'
 
         # Process the train dataset
-        processLabel(pathDirImagesBase, pathDirDatasets, bofExtractor, pathDirBofs, 'train')
+       # processLabel(pathDirImagesBase, pathDirDatasets, bofExtractor, pathDirBofs, 'train')
         
         # Run trainers   
         visual_time = time.time() - t_ref
-        print 'Visual classifier trained in ' , visual_time, ' seconds'
+        print 'Visual classifier trained in ' , visual_time, ' seconds (train)'
 
+        # Run trainers        
+        t_ref = time.time()
+        print 'Training with visual features...'
+        
         # Process the test dataset
-        #processLabel(bofExtractor, pathDirBofs, 'test')
+        processLabel(pathDirImagesBase, pathDirDatasets, bofExtractor, pathDirBofs, 'test')
+        
+        # Run trainers   
+        visual_time = time.time() - t_ref
+        print 'Visual classifier trained in ' , visual_time, ' seconds (test)'
+        
         
         print "Extracting BoF... done."
         
